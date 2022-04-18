@@ -10,10 +10,10 @@ const Header = () => {
         <>
             <header>
                 <div className="header-container">
-                    <div className="logo-container">
+                    <div className="logo-content">
                         <img src={logo} className="logo-img" />
                     </div>
-                    <div className="search-container" >
+                    <div className="search-content" >
                         
                         <SearchIcon className="search-icon" />
                         <input

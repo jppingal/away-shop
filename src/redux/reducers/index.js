@@ -1,8 +1,9 @@
-  import awayReducers from "./awayReducers";
+  import {combineReducers} from "redux";
 
-  import { combineReducers } from "redux";
+  import ProductReducers from "./ProductReducers";
 
-  const rootReducer = combineReducers({
-      awayReducers
-  })
-  export default rootReducer;
+   const reducers = combineReducers({
+    allProducts: ProductReducers
+  }
+  )
+  export default reducers;
