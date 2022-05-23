@@ -3,8 +3,11 @@ import camera from "../images/camera.jpg";
 import Banner from "./Banner";
 import "./products.css";
 import { Link } from "react-router-dom";
+import {useSelector} from "react-redux";
 
 const Products = () => {
+    const products = useSelector((state)=>state.allProducts.products)
+    // const {id, title} = products[0]
     return (
         <>
             <div className="product-container">
