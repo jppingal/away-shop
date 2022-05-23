@@ -8,16 +8,18 @@ import { Router, Route, Switch } from 'react-router-dom';
 
 function App() {
 
-  return (
-    <div className="App">
-    <Header/>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/products" component={Products} />
-        <Route path="/details" component={ProductDetails} />
-      </Switch>
-    </div>
-  );
+	// return <Home />
+
+	return (
+		<div className="App">
+			<Header />
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route path="/products" component={Products} />
+				<Route path="/details" component={ProductDetails} />
+			</Switch>
+		</div>
+	);
 }
 
 export default App;
