@@ -9,27 +9,31 @@ const Products = () => {
 	const products = useSelector((state) => state.allProducts.products)
 	console.log("I asm here in Products", products);
 
+	const renderProductsList = products.map((product) => {
+		const { id, image, title, price, category } = product;
+		return (
+			<Link to={`/details/${id}`}>
+				<div className="card" key={id}>
+					<img src={image} alt="camera" className="products-img" />
+					<div className="product-content">
+						<div className="product-title">{title}</div>
+						<div className="products-price">{price} </div>
+						<div className="product-category">{category}</div>
+					</div>
+				</div>
+			</Link>
+		)
+	})
+
 	return (
 		<>
 			<div className="product-container">
 				<Banner />
-				<Link to="/details">
-					<div className="card-container" >
-						{products.map((item) => {
-							return (
-								<div className="card" key={item.id}>
-									<img src={item.image} alt="camera" className="products-img" />
-									<div className="product-content">
-										<div className="product-title">{item.title}</div>
-										<div className="products-price">{item.price} </div>
-										<div className="product-category">{item.category}</div>
-									</div>
-								</div>
 
-							)
-						})}
-					</div>
-				</Link>
+				<div className="card-container" >
+					{renderProductsList}
+				</div>
+
 			</div>
 		</>
 	)

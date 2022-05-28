@@ -3,7 +3,7 @@ import { ActionTypes } from "../contants/actionType";
 const initialState = {
 	products: [],
 };
-const ProductReducers = (state = initialState, { type, payload }) => {
+export const ProductReducers = (state = initialState, { type, payload }) => {
 	switch (type) {
 		case ActionTypes.SET_PRODUCTS:
 			console.log("Here is products".payload);
@@ -12,4 +12,12 @@ const ProductReducers = (state = initialState, { type, payload }) => {
 			return state;
 	};
 };
-export default ProductReducers;
+
+export const SelectedProductReducers = (state = {}, { type, payload }) => {
+	switch (type) {
+		case ActionTypes.SELECTED_PRODUCT:
+			return { ...state, ...payload };
+		default:
+			return state;
+	};
+}

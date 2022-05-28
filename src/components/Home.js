@@ -12,12 +12,10 @@ const Home = () => {
 				// console.log("I am here in api call", res.data);
 				dispatch(setProducts(res.data))
 				return true
-
 			})
 			.catch((err) => {
 				console.log("err", err)
 			})
-
 	}
 
 	useEffect(() => {
