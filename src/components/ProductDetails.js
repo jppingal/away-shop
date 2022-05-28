@@ -34,9 +34,16 @@ const ProductDetails = () => {
                 </div>
                 <div className="productDetail-content">
                     <div className="product-details">
-                        <div className="product-title">{title}</div>
-                        <div className="product-reating">⭐⭐⭐⭐</div>
-                        <div className="product-price">{price}</div>
+                        <div className="product-title">
+                        {title}</div>
+                        <div className="product-reating">
+                        <div>
+                            <h4>Rating :</h4>
+                            <span style={{marginLeft: 20}}>rate: {rating.rate}</span>
+                            <span style={{marginLeft: 10}}>count: {rating.count}</span>
+                        </div>
+                        </div>
+                        <div className="product-price">₹ : {price}</div>
                         <div className="product-category">{category}</div>
                         <button className="btn">Add To Cart</button>
                         <div className="product-description">

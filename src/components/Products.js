@@ -17,7 +17,7 @@ const Products = () => {
 					<img src={image} alt="camera" className="products-img" />
 					<div className="product-content">
 						<div className="product-title">{title}</div>
-						<div className="products-price">{price} </div>
+						<div className="products-price">₹ : {price}</div>
 						<div className="product-category">{category}</div>
 					</div>
 				</div>
