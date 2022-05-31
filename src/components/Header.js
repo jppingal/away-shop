@@ -14,10 +14,8 @@ const Header = () => {
                         <img src={logo} className="logo-img" />
                     </div>
                     <div className="search-content" >
-                        
                         <SearchIcon className="search-icon" />
                         <input
-                        
                             className="search-bar"
                             type="search"
                             placeholder="search products"
@@ -25,12 +23,10 @@ const Header = () => {
                         />
                     </div>
                     <div className="user-container">
-                        <span className="cart"><ShoppingCartIcon/></span>
-                        <span className="user"><MotionPhotosAutoIcon/></span>
+                        <span className="cart"><ShoppingCartIcon /></span>
+                        <span className="user"><MotionPhotosAutoIcon /></span>
                     </div>
                 </div>
-
-
             </header>
         </>
     )

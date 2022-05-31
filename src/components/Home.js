@@ -9,7 +9,7 @@ const Home = () => {
 	const fetchApi = async () => {
 		const response = await axios.get("https://fakestoreapi.com/products")
 			.then((res) => {
-				// console.log("I am here in api call", res.data);
+				console.log("I am here in api call", res.data);
 				dispatch(setProducts(res.data))
 				return true
 			})
