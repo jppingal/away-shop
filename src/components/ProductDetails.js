@@ -4,7 +4,7 @@ import axios from "axios";
 import "./products.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
-    selectedProduct,
+    fatchProduct,
     removeSelectedProduct
 } from "../redux/action/productAction";
 
@@ -17,15 +17,15 @@ const ProductDetails = () => {
     // { !!rating && console.log("product------", rating.count) }
     const productId = useParams();
 
-    const fatchProductDetails = async () => {
-        const response = await axios
-            .get(`https://fakestoreapi.com/products/${productId.id}`)
-            .catch((err) => { console.log("Error :", err) })
-        dispatch(selectedProduct(response.data))
-    }
+    // const fatchProductDetails = async () => {
+    //     const response = await axios
+    //         .get(`https://fakestoreapi.com/products/${productId.id}`)
+    //         .catch((err) => { console.log("Error :", err) })
+    //     dispatch(selectedProduct(response.data))
+    // }
 
     useEffect(() => {
-        if (productId && productId !== " ") fatchProductDetails();
+        if (productId && productId !== " ") dispatch(fatchProduct(productId));
         return () => {
             dispatch(removeSelectedProduct());
         }

@@ -1,5 +1,4 @@
 import React from "react"
-import camera from "../images/camera.jpg";
 import Banner from "./Banner";
 import "./products.css";
 import { Link } from "react-router-dom";

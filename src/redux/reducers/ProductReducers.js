@@ -6,7 +6,9 @@ const initialState = {
 export const ProductReducers = (state = initialState, { type, payload }) => {
 	switch (type) {
 		case ActionTypes.SET_PRODUCTS:
-			console.log("Here is products".payload);
+			// console.log("i am Here in products".payload);
+			return { ...state, products: payload };
+		case ActionTypes.FATCH_PRODUCTS:
 			return { ...state, products: payload };
 		default:
 			return state;
